@@ -7,6 +7,7 @@ import com.hong.tms.common.ApiResponse;
 import com.hong.tms.dto.MemberDTO;
 import com.hong.tms.service.MemberService;
 
+import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
 
 import org.springframework.http.ResponseEntity;
@@ -21,6 +22,7 @@ public class MemberController {
   private final MemberService memberService;
 
   @PostMapping("/login")
+  @Operation(summary = "로그인", description = "로그인 성공여부 리턴")
   public ResponseEntity<ApiResponse<Boolean>> login(@RequestBody MemberDTO dto) {
     Boolean isSuccess = memberService.login(dto);
 
@@ -28,6 +30,7 @@ public class MemberController {
   }
 
   @PostMapping("/join")
+  @Operation(summary = "회원가입", description = "회원가입 성공 후 결과 리턴")
   public ResponseEntity<ApiResponse<MemberDTO>> join(@RequestBody MemberDTO dto) {
 
     MemberDTO joinedDTO = memberService.join(dto);
