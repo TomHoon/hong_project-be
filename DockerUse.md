@@ -10,4 +10,4 @@
 
 ### docker 실행
 
-- docker run -d -p 22000:22000 --name tms-container tms-image
+- docker run -d -p 22000:22000 --network chatting-network --name tms-container tms-image
