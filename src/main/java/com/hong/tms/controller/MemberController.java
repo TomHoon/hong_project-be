@@ -11,12 +11,15 @@ import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/api/v1/member")
 @RequiredArgsConstructor
+@CrossOrigin("*")
 public class MemberController {
 
   private final MemberService memberService;
@@ -36,6 +39,11 @@ public class MemberController {
     MemberDTO joinedDTO = memberService.join(dto);
 
     return ResponseEntity.ok(ApiResponse.success(joinedDTO));
+  }
+
+  @GetMapping("/test")
+  public ResponseEntity<ApiResponse<Boolean>> test() {
+    return ResponseEntity.ok(ApiResponse.success(true));
   }
 
 }
