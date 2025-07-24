@@ -25,6 +25,7 @@ public class OrderServiceTests {
   dto.setOrderDate("20250723");
   dto.setOrderName("testname");
   dto.setOrderNo("001");
+  dto.setOrderDpt("IT");
   dto.setOrderStatus("test");
 
   OrderDTO res = orderService.registerOrder(dto);

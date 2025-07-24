@@ -18,6 +18,8 @@ public class OrderDTO {
 
   private String orderStatus;
 
+  private String orderDpt;
+
   private String orderDate;
 
   public OrderEntity toEntity() {
@@ -25,6 +27,7 @@ public class OrderDTO {
         .orderNo(this.orderNo)
         .orderName(this.orderName)
         .orderStatus(this.orderStatus)
+        .orderDpt(this.orderDpt)
         .orderDate(this.orderDate)
         .build();
   }
@@ -33,6 +36,7 @@ public class OrderDTO {
     this.orderNo = e.getOrderNo();
     this.orderName = e.getOrderName();
     this.orderStatus = e.getOrderStatus();
+    this.orderDpt = e.getOrderDpt();
     this.orderDate = e.getOrderDate();
   }
 }

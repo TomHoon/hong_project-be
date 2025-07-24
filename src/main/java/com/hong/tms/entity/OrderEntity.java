@@ -30,10 +30,12 @@ public class OrderEntity {
 
  private String orderStatus;
 
+ private String orderDpt;
+
  private String orderDate;
 
  public OrderDTO toDTO() {
-  return new OrderDTO(ono, orderNo, orderName, orderStatus, orderDate);
+  return new OrderDTO(ono, orderNo, orderName, orderStatus, orderDpt, orderDate);
  }
 
  public void update(OrderDTO dto) {
@@ -41,5 +43,6 @@ public class OrderEntity {
   this.orderName = dto.getOrderName();
   this.orderStatus = dto.getOrderStatus();
   this.orderDate = dto.getOrderDate();
+  this.orderDpt = dto.getOrderDpt();
  }
 }
