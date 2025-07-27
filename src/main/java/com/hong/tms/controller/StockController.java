@@ -48,8 +48,8 @@ public class StockController {
 
  // 삭제
  @PostMapping("/deleteStock")
- public ResponseEntity<ApiResponse<Boolean>> deleteStock(@RequestBody StockDTO dto) {
-  Boolean isDeleted = stockService.deleteStock(dto.getSno());
+ public ResponseEntity<ApiResponse<Boolean>> deleteStock(@RequestBody Long sno) {
+  Boolean isDeleted = stockService.deleteStock(sno);
   return ResponseEntity.ok(ApiResponse.success(isDeleted));
  }
 

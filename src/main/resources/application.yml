@@ -4,8 +4,8 @@ spring:
 
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://192.168.0.10:33306/tms
-    # url: jdbc:mariadb://172.19.0.2:3306/tms
+    # url: jdbc:mariadb://192.168.0.10:33306/tms
+    url: jdbc:mariadb://172.19.0.2:3306/tms
     username: root
     password: 2846
     hikari: # DB Pool Size

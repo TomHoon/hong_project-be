@@ -32,11 +32,12 @@ public class StockEntity {
 
  private String stockPlace;
 
- @Builder.Default
- private int stockDegree = 0;
+ private String stockDegree;
+
+ private String stockPosition;
 
  public StockDTO toDTO() {
-  return new StockDTO(sno, stockCode, stockName, stockCounts, stockPlace, stockDegree);
+  return new StockDTO(sno, stockCode, stockName, stockCounts, stockPlace, stockDegree, stockPosition);
  }
 
  public void update(StockDTO dto) {
@@ -45,6 +46,7 @@ public class StockEntity {
   this.stockCounts = dto.getStockCounts();
   this.stockPlace = dto.getStockPlace();
   this.stockDegree = dto.getStockDegree();
+  this.stockPosition = dto.getStockPosition();
  }
 
 }

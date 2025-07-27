@@ -32,6 +32,7 @@ public class StockService {
         .stockCounts(dto.getStockCounts())
         .stockPlace(dto.getStockPlace())
         .stockDegree(dto.getStockDegree())
+        .stockPosition(dto.getStockPosition())
         .build();
 
     StockEntity result = stockRepository.save(e);

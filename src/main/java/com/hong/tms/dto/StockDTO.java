@@ -20,7 +20,9 @@ public class StockDTO {
 
   private String stockPlace;
 
-  private int stockDegree = 0;
+  private String stockDegree;
+
+  private String stockPosition;
 
   public StockEntity toEntity() {
     return StockEntity.builder()
@@ -29,14 +31,17 @@ public class StockDTO {
         .stockCounts(this.stockCounts)
         .stockPlace(this.stockPlace)
         .stockDegree(this.stockDegree)
+        .stockPosition(this.stockPosition)
         .build();
   }
 
   public StockDTO(StockEntity e) {
+    this.sno = e.getSno();
     this.stockCode = e.getStockCode();
     this.stockName = e.getStockName();
     this.stockCounts = e.getStockCounts();
     this.stockPlace = e.getStockPlace();
     this.stockDegree = e.getStockDegree();
+    this.stockPosition = e.getStockPosition();
   }
 }

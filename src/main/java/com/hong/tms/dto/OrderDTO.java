@@ -24,6 +24,7 @@ public class OrderDTO {
 
   public OrderEntity toEntity() {
     return OrderEntity.builder()
+        .ono(this.ono)
         .orderNo(this.orderNo)
         .orderName(this.orderName)
         .orderStatus(this.orderStatus)
@@ -33,6 +34,7 @@ public class OrderDTO {
   }
 
   public OrderDTO(OrderEntity e) {
+    this.ono = e.getOno();
     this.orderNo = e.getOrderNo();
     this.orderName = e.getOrderName();
     this.orderStatus = e.getOrderStatus();

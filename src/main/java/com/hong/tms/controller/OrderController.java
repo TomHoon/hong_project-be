@@ -49,8 +49,8 @@ public class OrderController {
 
  // 삭제
  @PostMapping("/deleteOrder")
- public ResponseEntity<ApiResponse<Boolean>> deleteOrder(@RequestBody OrderDTO dto) {
-  Boolean isDeleted = orderService.deleteOrder(dto.getOno());
+ public ResponseEntity<ApiResponse<Boolean>> deleteOrder(@RequestBody Long ono) {
+  Boolean isDeleted = orderService.deleteOrder(ono);
   return ResponseEntity.ok(ApiResponse.success(isDeleted));
  }
 
