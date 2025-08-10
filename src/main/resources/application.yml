@@ -21,7 +21,7 @@ spring:
     show-sql: true
 
 server:
-  port: 23000
+  port: 25000
   servlet:
     encoding:
       charset: UTF-8
