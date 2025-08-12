@@ -13,7 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 @Component
 public class FileUtil {
 
-  private final static String UPLOAD_DIR = "/uploads";
+  private final static String UPLOAD_DIR = "uploads/";
 
   public String upload(MultipartFile file) throws IOException {
     // 비어있는지 체크
